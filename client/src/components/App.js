@@ -7,8 +7,11 @@ import Flash from './Flash';
 import Home from './Home';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
-import FetchUser from './FetchUser';
+import FetchDude from './FetchDude';
 import { Switch, Route } from 'react-router-dom';
+import Dudes from './Dudes';
+import DudeView from './DudeView'
+
 
 class App extends Component {
   render() {
@@ -16,14 +19,16 @@ class App extends Component {
       <div>
         <NavBar />
         <Flash />
-        <FetchUser>
+        <FetchDude>
           <Switch>
             <Route exact path='/' component={Home} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
+            <Route path="/dudes" component={Dudes} />
+            <Route exact path="/dudes/:id" component={DudeView} />
             <Route component={NoMatch} />
           </Switch>
-        </FetchUser>
+        </FetchDude>
       </div>
     );
   }
