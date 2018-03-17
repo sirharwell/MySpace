@@ -11,6 +11,14 @@ import FetchDude from './FetchDude';
 import { Switch, Route } from 'react-router-dom';
 import Dudes from './Dudes';
 import DudeView from './DudeView'
+import image from './clouds.jpg'
+
+const styles = {
+  width: '100%',
+  height: '1200px',
+  background: 'url(' + image + ')',
+  backgroundSize: 'cover',
+}
 
 
 class App extends Component {
