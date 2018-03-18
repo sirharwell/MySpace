@@ -26,17 +26,14 @@ class App extends Component {
     return (
       <div>
         <NavBar />
-        <Flash />
-        <FetchDude>
           <Switch>
             <Route exact path='/' component={Home} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
-            <Route path="/dudes" component={Dudes} />
-            <Route exact path="/dudes/:id" component={DudeView} />
+            <AuthRoute path="/dudes" component={Dudes} />
+            <AuthRoute exact path="/dudes/:id" component={DudeView} />
             <Route component={NoMatch} />
           </Switch>
-        </FetchDude>
       </div>
     );
   }
