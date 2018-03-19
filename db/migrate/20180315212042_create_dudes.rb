@@ -6,8 +6,6 @@ class CreateDudes < ActiveRecord::Migration[5.1]
       t.text :job
       t.text :city
       t.text :pic
-
-
       t.timestamps
     end
   end

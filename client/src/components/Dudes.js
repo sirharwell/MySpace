@@ -88,10 +88,6 @@ handleChange = (e, {value}) => {
           </Card.Group>
       </Container>)
 }}
-   const mapStateToProps = (state) => {
-     const { dudes } = state
-     const names = [...new Set(dudes.map( d => d.name))]
-     return { dudes, names }
-   }
 
-export default connect(mapStateToProps)(Dudes);
+
+export default connect(Dudes);
